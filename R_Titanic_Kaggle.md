@@ -164,7 +164,7 @@ combined%>%filter(dset=="train")%>%
   ggtitle("Survived by Title")+xlab("Survived")+labs(fill="Title")+ylab("# of pax")
 ```
 
-![](R_Titanic_Kaggle_files/figure-markdown_github/unnamed-chunk-2-2.png)
+![](figure-markdown_github/unnamed-chunk-2-2.png)
 
 ``` r
 combined%>%filter(dset=="train")%>%
@@ -174,7 +174,7 @@ combined%>%filter(dset=="train")%>%
   guides(col=guide_legend(title="Title"))
 ```
 
-![](R_Titanic_Kaggle_files/figure-markdown_github/unnamed-chunk-2-3.png)
+![](figure-markdown_github/unnamed-chunk-2-3.png)
 
 ``` r
 combined%>%
@@ -185,7 +185,7 @@ summarise(SurvivalRate=mean(Survived),count=n())%>%
   ggtitle("Survival Rate by Title")+labs(col="sex",size="# of pax")
 ```
 
-![](R_Titanic_Kaggle_files/figure-markdown_github/unnamed-chunk-2-4.png)
+![](figure-markdown_github/unnamed-chunk-2-4.png)
 
 ``` r
 ##cluster titles
@@ -202,7 +202,7 @@ combined%>%filter(dset=="train")%>%
   ggtitle("Survived by Title")+xlab("Survived")+labs(fill="Survived")+ylab("# of pax")
 ```
 
-![](R_Titanic_Kaggle_files/figure-markdown_github/unnamed-chunk-2-5.png)
+![](figure-markdown_github/unnamed-chunk-2-5.png)
 
 ``` r
 combined%>%
@@ -213,7 +213,7 @@ summarise(SurvivalRate=mean(Survived),count=n())%>%
   ggtitle("Survival Rate by Title")+labs(col="sex",size="# of pax")
 ```
 
-![](R_Titanic_Kaggle_files/figure-markdown_github/unnamed-chunk-2-6.png)
+![](figure-markdown_github/unnamed-chunk-2-6.png)
 
 ``` r
 groupsize=combined%>%
@@ -251,7 +251,7 @@ combined%>%filter(dset=="train")%>%ggplot(aes(x=as.factor(Pclass),fill=as.factor
   labs(x="Pclass",fill="Survived")
 ```
 
-![](R_Titanic_Kaggle_files/figure-markdown_github/unnamed-chunk-2-7.png)
+![](figure-markdown_github/unnamed-chunk-2-7.png)
 
 ``` r
 combined%>%filter(dset=="train")%>%
@@ -278,7 +278,7 @@ combined%>%filter(dset=="train")%>%ggplot(aes(x=Age,y=Pclass,color=as.factor(Sur
   facet_grid(Sex~.)+ggtitle("Survival by Class and Age")+labs(col="Survived")
 ```
 
-![](R_Titanic_Kaggle_files/figure-markdown_github/unnamed-chunk-2-8.png)
+![](figure-markdown_github/unnamed-chunk-2-8.png)
 
 ``` r
 combined%>%filter(dset=="train")%>%ggplot(aes(x=Fare,y=Pclass,color=as.factor(Survived)))+
@@ -287,7 +287,7 @@ combined%>%filter(dset=="train")%>%ggplot(aes(x=Fare,y=Pclass,color=as.factor(Su
   facet_grid(Sex~.)+ggtitle("Survival by Class and Fare")+labs(col="Survived")
 ```
 
-![](R_Titanic_Kaggle_files/figure-markdown_github/unnamed-chunk-2-9.png)
+![](figure-markdown_github/unnamed-chunk-2-9.png)
 
 ``` r
 combined%>%filter(dset=="train")%>%
@@ -296,7 +296,7 @@ combined%>%filter(dset=="train")%>%
   scale_x_continuous(breaks=c(1:11))+ggtitle("Survival by Group Size")+labs(fill="Survived")
 ```
 
-![](R_Titanic_Kaggle_files/figure-markdown_github/unnamed-chunk-2-10.png)
+![](figure-markdown_github/unnamed-chunk-2-10.png)
 
 ``` r
 combined%>%filter(dset=="train")%>%
@@ -326,7 +326,7 @@ combined%>%filter(dset=="train")%>%
   scale_x_continuous(breaks=c(1:11))+ggtitle("Survival by Family Size")+labs(fill="Survived")
 ```
 
-![](R_Titanic_Kaggle_files/figure-markdown_github/unnamed-chunk-2-11.png)
+![](figure-markdown_github/unnamed-chunk-2-11.png)
 
 ``` r
 combined%>%filter(dset=="train")%>%
@@ -361,7 +361,7 @@ combined%>%filter(dset=="train")%>%
  ggtitle("Survival by Family Size")+labs(fill="Survived")
 ```
 
-![](R_Titanic_Kaggle_files/figure-markdown_github/unnamed-chunk-2-12.png)
+![](figure-markdown_github/unnamed-chunk-2-12.png)
 
 ``` r
 combined%>%filter(dset=="train")%>%
@@ -385,7 +385,7 @@ combined%>%filter(dset=="train")%>%
   ggtitle("Survival by Travel type")+labs(fill="Survived")
 ```
 
-![](R_Titanic_Kaggle_files/figure-markdown_github/unnamed-chunk-2-13.png)
+![](figure-markdown_github/unnamed-chunk-2-13.png)
 
 ``` r
 combined%>%filter(dset=="train")%>%
@@ -413,7 +413,7 @@ combined%>%filter(dset=="train")%>%
   ggtitle("Survival by Deck")+labs(fill="Survived")
 ```
 
-![](R_Titanic_Kaggle_files/figure-markdown_github/unnamed-chunk-2-14.png)
+![](figure-markdown_github/unnamed-chunk-2-14.png)
 
 ``` r
 combined%>%filter(dset=="train")%>%
@@ -502,13 +502,13 @@ combinedrf$Age[is.na(combinedrf$Age)]<-round(predict(model,age_transformed[is.na
 combined%>%ggplot(aes(Age))+geom_histogram()+ggtitle("Original Age Distribution")
 ```
 
-![](R_Titanic_Kaggle_files/figure-markdown_github/unnamed-chunk-3-1.png)
+![](figure-markdown_github/unnamed-chunk-3-1.png)
 
 ``` r
 combinedrf%>%ggplot(aes(Age))+geom_histogram()+ggtitle("Estimated Age Distribution")
 ```
 
-![](R_Titanic_Kaggle_files/figure-markdown_github/unnamed-chunk-3-2.png)
+![](figure-markdown_github/unnamed-chunk-3-2.png)
 
 ``` r
 combinedrf<-combinedrf%>%
@@ -525,7 +525,7 @@ combinedrf%>%filter(dset=="train")%>%
   ggtitle("Survival Child")+labs(fill="Survived")
 ```
 
-![](R_Titanic_Kaggle_files/figure-markdown_github/unnamed-chunk-3-3.png)
+![](figure-markdown_github/unnamed-chunk-3-3.png)
 
 ``` r
 combinedrf%>%filter(dset=="train")%>%
@@ -551,7 +551,7 @@ combinedrf%>%filter(dset=="train")%>%
   ggtitle("Survival Mother")+labs(fill="Survived")
 ```
 
-![](R_Titanic_Kaggle_files/figure-markdown_github/unnamed-chunk-3-4.png)
+![](figure-markdown_github/unnamed-chunk-3-4.png)
 
 ``` r
 combinedrf%>%filter(dset=="train")%>%
@@ -663,7 +663,7 @@ lambda = seq(0.0001, 1, length = 250))
 plot(model_glmnet)
 ```
 
-![](R_Titanic_Kaggle_files/figure-markdown_github/unnamed-chunk-4-1.png)
+![](figure-markdown_github/unnamed-chunk-4-1.png)
 
 ``` r
 max(model_glmnet[["results"]][["ROC"]])
@@ -767,13 +767,13 @@ model_rf
 plot(model_rf)
 ```
 
-![](R_Titanic_Kaggle_files/figure-markdown_github/unnamed-chunk-4-2.png)
+![](figure-markdown_github/unnamed-chunk-4-2.png)
 
 ``` r
 plot(varImp(model_rf),main="Random Forest")
 ```
 
-![](R_Titanic_Kaggle_files/figure-markdown_github/unnamed-chunk-4-3.png)
+![](figure-markdown_github/unnamed-chunk-4-3.png)
 
 ``` r
 p_prob<-predict(model_rf,testX,type="prob")
@@ -799,13 +799,13 @@ gabarge<-capture.output(model_gbm <- train(
 plot(model_gbm)
 ```
 
-![](R_Titanic_Kaggle_files/figure-markdown_github/unnamed-chunk-4-4.png)
+![](figure-markdown_github/unnamed-chunk-4-4.png)
 
 ``` r
 plot(varImp(model_gbm),main="GBM")
 ```
 
-![](R_Titanic_Kaggle_files/figure-markdown_github/unnamed-chunk-4-5.png)
+![](figure-markdown_github/unnamed-chunk-4-5.png)
 
 ``` r
 p_prob<-predict(model_gbm,testX,type="prob")
@@ -813,7 +813,7 @@ p_class_gbm<-predict(model_gbm,testX)
 plot(varImp(object=model_gbm),main="GBM - Variable Importance")
 ```
 
-![](R_Titanic_Kaggle_files/figure-markdown_github/unnamed-chunk-4-6.png)
+![](figure-markdown_github/unnamed-chunk-4-6.png)
 
 ``` r
 xgb_grid <- expand.grid(
@@ -839,7 +839,7 @@ p_class_xgbTree<-predict(model_xgbTree,testX)
 plot(varImp(object=model_xgbTree),main="XGBTree - Variable Importance")
 ```
 
-![](R_Titanic_Kaggle_files/figure-markdown_github/unnamed-chunk-4-7.png)
+![](figure-markdown_github/unnamed-chunk-4-7.png)
 
 ``` r
 model_list <- list(logistic = model_logistic2, glmnet = model_glmnet,rf=model_rf,gbm=model_gbm,xgbTree=model_xgbTree)
@@ -884,7 +884,7 @@ summary(resamples)
 bwplot(resamples,metric="ROC")
 ```
 
-![](R_Titanic_Kaggle_files/figure-markdown_github/unnamed-chunk-4-8.png)
+![](figure-markdown_github/unnamed-chunk-4-8.png)
 
 ``` r
 rf_submit<-data.frame(PassengerId=test$PassengerId,Survived=ifelse(p_class_rf=="Y",1,0))

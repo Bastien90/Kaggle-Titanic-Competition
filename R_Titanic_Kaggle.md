@@ -1,7 +1,6 @@
 Titanic: Machine Learning from Disaster
 ================
 Bastien Haller
-\`format(Sys.Date())
 
 1.1 Libraries
 =============
@@ -140,7 +139,7 @@ combined%>%filter(dset=="train")%>%
    geom_text(stat="count",aes(label=..count..),position = "stack",vjust=1)
 ```
 
-![](R_Titanic_Kaggle_files/figure-markdown_github/unnamed-chunk-2-1.png)
+![](figure-markdown_github/unnamed-chunk-2-1.png)
 
 ``` r
 combined%>%filter(dset=="train")%>%

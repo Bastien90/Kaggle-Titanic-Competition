@@ -810,7 +810,6 @@ plot(varImp(model_gbm),main="GBM")
 ``` r
 p_prob<-predict(model_gbm,testX,type="prob")
 p_class_gbm<-predict(model_gbm,testX)
-plot(varImp(object=model_gbm),main="GBM - Variable Importance")
 ```
 
 ![](figure-markdown_github/unnamed-chunk-4-6.png)

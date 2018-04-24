@@ -15,7 +15,6 @@ Libraries
 
 ``` r
 rm(list=ls())
-setwd("C:/Users/Bastien/Desktop/Kurse/Kaggle/Titanic")
 set.seed(1)
 library(dplyr)
 library(ggplot2)
